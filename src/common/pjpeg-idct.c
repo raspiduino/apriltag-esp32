@@ -288,7 +288,7 @@ static inline unsigned char IRAM_ATTR njClip(const int x) {
 #define W6 1108
 #define W7 565
 
-static inline void IRAM_ATTR njRowIDCT(int* blk) {
+static inline void IRAM_ATTR njRowIDCT(int32_t* blk) {
     int x0, x1, x2, x3, x4, x5, x6, x7, x8;
     if (!((x1 = blk[4] << 11)
         | (x2 = blk[6])
@@ -333,7 +333,7 @@ static inline void IRAM_ATTR njRowIDCT(int* blk) {
     blk[7] = (x7 - x1) >> 8;
 }
 
-static inline void IRAM_ATTR njColIDCT(const int* blk, unsigned char *out, int stride) {
+static inline void IRAM_ATTR njColIDCT(const int32_t* blk, unsigned char *out, int stride) {
     int x0, x1, x2, x3, x4, x5, x6, x7, x8;
     if (!((x1 = blk[8*4] << 8)
         | (x2 = blk[8*6])
