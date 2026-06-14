@@ -25,6 +25,7 @@ of the authors and should not be interpreted as representing official policies,
 either expressed or implied, of the Regents of The University of Michigan.
 */
 
+#include <esp_attr.h> // Added to fix issue #3
 #include <math.h>
 
 /** SVD 2x2.
